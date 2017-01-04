@@ -7,6 +7,36 @@
 
 		<!-- This is how you import css, a file that has information about how to style your page -->
 		<link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            .project-card
+            {
+                width:30%;
+                /*border-color:black;
+                border-width:2px;
+                border-style:solid;*/
+                border-radius:5px;
+                box-shadow: 0px 0px 5px #888888;
+                float:left;
+                margin:1.6666%;
+                overflow:hidden;
+                padding:10px;
+                background:#FEFEFE;
+            }
+            .project-card img
+            {
+                height:200px;
+            }
+            .description
+            {
+                max-height:150px;
+                overflow-y:scroll;
+            }
+            body
+            {
+                padding: 20px 10%;
+                background:#EFEFEF;
+            }
+        </style>
 	</head>
 	<body>
         
@@ -26,7 +56,7 @@ html tags. In this example I show then h1-5 tags, p tags, ul/ol and li tags, div
             <li>item2</li>
             <li>item3</li>
         </ul>
-        <div>
+        <div class="project-card">
             <h3>
                Day 1
             </h3>
@@ -34,41 +64,33 @@ html tags. In this example I show then h1-5 tags, p tags, ul/ol and li tags, div
             <h4>
                 Description
             </h4>
-            <span>The first day will be project setup, as well as introducing the html tag system. They will make a very basic webpage.</span>
-            <a href="#">see what we do day 1</a>
+            <span class="description">The first day will be project setup, as well as introducing the html tag system. They will make a very basic webpage.</span>
+            <a href="index.html">see what we do day 1</a>
         </div>
-        <div>
+        <div class="project-card">
             <h3>
                Day 2
             </h3>
-            <img src = "https://thumbsplus.tutsplus.com/uploads/users/1251/posts/26216/preview_image/CSSCover.png?height=300&width=300">
-            <h4>
+            <img src = "http://blog.kevinchisholm.com/wp-content/uploads/2016/05/CSS3-logo-214x300.png">
+            <div class="description">
+                            <h4>
                 Description
             </h4>
-            <span>The second day will be an introduction to css. we will be learning how to style html elements, learning about inline css, and learning about classes and ids</span>
+                <span class="description">The second day will be an introduction to css. we will be learning how to style html elements, learning about inline css, and learning about classes and ids</span>
+            </div>
+
             <a href="./day2.html">see what we do day 2</a>
         </div>
-        <div>
+        <div class="project-card">
             <h3>
-               Day 2
+               Day 3-4
             </h3>
             <img src = "https://thumbsplus.tutsplus.com/uploads/users/1251/posts/26216/preview_image/CSSCover.png">
             <h4>
                 Description
             </h4>
-            <span>This is my project, it does cool things. I worked hard on it. Give me an A please</span>
-            <a href="./day2.html">see what we do day 2</a>
-        </div>
-        <div>
-            <h3>
-               Day 2
-            </h3>
-            <img src = "https://thumbsplus.tutsplus.com/uploads/users/1251/posts/26216/preview_image/CSSCover.png?height=300&width=300">
-            <h4>
-                Description
-            </h4>
-            <span>This is my project, it does cool things. I worked hard on it. Give me an A please</span>
-            <a href="./day2.html">see what we do day 2</a>
+            <span>Catching up, and letting them explore, ask questions and use some libraries</span>
+            <a href="./day2.html">see what we do day 3-4</a>
         </div>
 
 		<!--This is how you import javascript, a file containing functions to be used on your page-->
