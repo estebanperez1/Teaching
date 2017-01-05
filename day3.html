@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- This is how you import css, a file that has information about how to style your page -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            #intro
+            {
+                padding:20px;
+            }
+            .card
+            {
+                border-radius:5px;
+                box-shadow: 0px 0px 5px #888888;
+                overflow:hidden;
+                padding:10px;
+                background:#FEFEFE;
+            }
+            .project-card
+            {
+                transition: all 1s;
+                width:30%;
+                float:left;
+                margin:1.6666%;
+                text-align:center;
+            }
+            @media screen and (max-width: 700px) {
+                .project-card
+                {
+                    width:100%;
+                    margin:20px 0px;
+                }
+            }
+
+            .project-card img
+            {
+                display:block;
+                margin:auto;
+                height:200px;
+            }
+            .project-card:hover
+            {
+
+                transform:scale(1.05);
+            }
+            .description
+            {
+                height:100px;
+                overflow-y:auto;
+            }
+            body
+            {
+                padding: 20px 10%;
+                background:#EFEFEF;
+            }
+            @keyframes spin
+            {
+                from{
+                    transform:rotate(0deg);
+                }to{
+                    transform:rotate(360deg);
+                }
+            }
+            .pointer
+            {
+                position:absolute;
+                height:20px;
+                width:20px;
+                background-color:black;
+                animation-duration: 0.5s;
+                animation-name: spin;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                pointer-events:none;
+                
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- 
+The first day will be project setup, walking through what git does, and how to use it, as well as teaching them 
+html tags. In this example I show then h1-5 tags, p tags, ul/ol and li tags, div tags, img tags, span tags, and link tags.
+-->
+        <div id="intro" class="card">
+            <h1>Hello, I am ________!</h1><!-- h1 - h5 are headings -->
+            <p>
+                Short description of who they are, and really anything they want to tell us. 
+            </p>
+            <h4>
+                list of whatever they want
+            </h4>
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+            </ul>
+        </div>
+        <div class="card project-card">
+            <h3>
+                Day 1
+            </h3>
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png">
+            <h4>
+                Description
+            </h4>
+            <div class="description">
+                <span class="description">The first day will be project setup, as well as introducing the html tag system. They will make a very basic webpage.</span>
+            </div>
+            <a href="index.html">see what we do day 1</a>
+        </div>
+        <div class="card project-card">
+            <h3>
+                Day 2
+            </h3>
+            <img src = "http://blog.kevinchisholm.com/wp-content/uploads/2016/05/CSS3-logo-214x300.png">
+            <h4>
+                Description
+            </h4>
+            <div class="description">
+
+                <span class="description">The second day will be an introduction to css. we will be learning how to style html elements, learning about inline css, and learning about classes and ids</span>
+            </div>
+
+            <a href="./day2.html">see what we do day 2</a>
+        </div>
+        <div class="card project-card">
+            <h3>
+                Day 3
+            </h3>
+            <img src = "https://wp-andypiapps.rhcloud.com/wp-content/uploads/2016/08/js4560_450.png">
+            <h4>
+                Description
+            </h4>
+            <div class="description">
+
+                <span class="description">We will learn about making javascript interact with html elements, and we will use the jQuery library for a simple implimentation that reinforces the use, and importance of classes, and IDs. </span>
+            </div>
+
+            <a href="./day3.html">see what we do day 3</a>
+        </div>
+        <div class="pointer" id="cursor" style="background-color:red;">
+
+        </div>
+        <div class="pointer" style="background-color:orange;">
+
+        </div>
+        <div class="pointer" style="background-color:yellow;">
+
+        </div>
+        <div class="pointer" style="background-color:green;">
+
+        </div>
+        <div class="pointer" style="background-color:blue;">
+
+        </div>
+        <!--This is how you import javascript, a file containing functions to be used on your page-->
+        <script src="js/utils.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(document).on('mousemove', function(e){
+                var elements = $('.pointer');
+                var counter = 0;
+                elements.each(function()
+                              {
+                    var temp = $(this);
+                  //  setTimeout(function(){ alert("Hello"); }, 3000);
+                    setTimeout(function(){setLocation(temp,e.pageX,e.pageY)},50*counter);
+                    counter++
+                    
+                })
+                function setLocation(myPoint,x,y)
+                {
+                    myPoint.css({
+                    left:  x,
+                    top:   y
+                });
+                }
+            });
+        </script>
+    </body>
+</html>
