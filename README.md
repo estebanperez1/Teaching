@@ -2,7 +2,18 @@
 Template structure for web Development<br>
 -js<br>
 -css<br>
--php<br>
+## Reference Sheet
+HTML<br>
+  - http://www.w3schools.com/tags/<br>
+  - http://www.w3schools.com/tags/ref_attributes.asp<br>
+  
+CSS<br>
+  - http://www.w3schools.com/cssref/<br>
+  
+Javascript/jQuery<br>
+  - http://marijnhaverbeke.nl/js-cheatsheet.html<br>
+  - https://oscarotero.com/jquery/<br>
+
 # Useful git Commands
 
 
